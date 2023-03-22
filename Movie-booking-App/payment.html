@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/payment.css">
+    <title>Payment</title>
+</head>
+
+<body>
+    <div class="header">
+        <div id="back-button">
+            <button>Back</button>
+        </div>
+        <div id="checkout">CheckOut</div>
+    </div>
+    <div class="payment-box">
+        <div class="add-to-card">
+            <h1>Summary</h1>
+            <h2>Name of Movie</h2>
+            <h3>Classic Ticket</h3>
+            <span style="font-size: 1.2rem;">Number of Ticket</span><input type="number">
+            <p>Convenience Fee (1.75%)</p>
+            <hr>
+            <p>Sub Total</p>
+
+        </div>
+        <div class="payment-summary">
+            <div id="payment">Payment</div>
+            
+            <form id="form">
+
+                <span class="name">First Name</span></span><input class="person-details" type="text">
+                <span class="name">Last Name </span> <input class="person-details" type="text">
+                <span class="name">Email</span> <input class="person-details" type="email"
+                    placeholder="you@example.com">
+                <hr>
+                <br>
+
+
+
+                <input class="radio-button" id="CreditBtn" type="radio" name="payment"><label for="CreditBtn">Credit Card</label>
+                <input class="radio-button" id="debitBtn" type="radio" name="payment"><label for="debitBtn">Debit card</label>
+                <input class="radio-button" id="upiBtn" type="radio" name="payment"><label for="upiBtn">Upi</label>
+
+                <br>
+                <label for="">Name on Card</label><br>
+                <input class="card" type="text">
+                <br>
+                <label for="">Credit Card number</label><br>
+                <input class="card" type="number">
+                <br>
+                <label>Expiration</label><br>
+                <input class="card" type="date">
+                <br>
+                <label for="">CVV</label><br>
+                <input class="card" type="number">
+                <br>
+                <input class="card" type="submit" value="Procced to Pay">
+
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script src="./payment.js"></script>
