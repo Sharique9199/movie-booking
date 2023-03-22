@@ -1,13 +1,13 @@
 let movieSearch = document.querySelector('#search-movie');
 let movieListContainer = document.querySelector('#movie-list-container');
 let serachButton = document.querySelector('#search-button');
-let movieType=document.querySelector("#movie-type")
+let movieType = document.querySelector("#movie-type")
 
 serachButton.addEventListener('click', () => {
     let inputVal = movieSearch.value;
     movieSearchHandler(inputVal);
     movieSearch.value = "";
-   
+
 });
 
 function showPoup() {
@@ -126,6 +126,13 @@ function appendSideBar(data) {
 
 }
 
+
+// storing movie name and price in local storage;
+
+function storepriceAndMovieName(data) {
+    localStorage.setItem('movieKey', JSON.stringify(data));
+}
+
 function popupData(data) {
     // console.log(data);
     document.querySelector('#popup-wraper').innerHTML = '';
@@ -159,8 +166,12 @@ function popupData(data) {
         document.querySelector("#bg-dark").style.display = 'none';
     })
 
-    document.querySelector('#bookBtn').addEventListener('click', () => {
-        location.href = './payment.html'
+    document.querySelector('#bookBtn').addEventListener('click', (e) => {
+        location.href = './payment.html';
+        let nameAndPriceDetails = { name: '', price: '' };
+        nameAndPriceDetails.name = e.target.parentElement.firstElementChild.innerHTML;
+        nameAndPriceDetails.price = e.target.parentElement.lastElementChild.previousElementSibling.innerHTML.slice(-3);
+        storepriceAndMovieName(nameAndPriceDetails);
     })
 }
 

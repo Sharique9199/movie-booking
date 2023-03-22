@@ -19,44 +19,48 @@
     <div class="payment-box">
         <div class="add-to-card">
             <h1>Summary</h1>
-            <h2>Name of Movie</h2>
-            <h3>Classic Ticket</h3>
-            <span style="font-size: 1.2rem;">Number of Ticket</span><input type="number">
-            <p>Convenience Fee (1.75%)</p>
+            <h2>Name of Movie: <span id="movie-name"></span></h2>
+            <h3>Classic Ticket: <span id="movie-price"></span></h3>
+            <span style="font-size: 1.2rem;">Number of Ticket</span><input type="number" id="ticket-number" value="1">
+            <p>Convenience Fee (1.75%): <span id="tax"></span></p>
             <hr>
-            <p>Sub Total</p>
+            <p>Sub Total: <span id="sub-total">0</span></p>
 
         </div>
         <div class="payment-summary">
             <div id="payment">Payment</div>
-            
+
             <form id="form">
 
-                <span class="name">First Name</span></span><input class="person-details" type="text">
-                <span class="name">Last Name </span> <input class="person-details" type="text">
-                <span class="name">Email</span> <input class="person-details" type="email"
+                <span class="name">First Name</span></span><input class="person-details input" type="text">
+                <span class="name">Last Name </span> <input class="person-details input" type="text">
+                <span class="name">Email</span> <input class="person-details input" type="email"
                     placeholder="you@example.com">
                 <hr>
                 <br>
 
 
 
-                <input class="radio-button" id="CreditBtn" type="radio" name="payment"><label for="CreditBtn">Credit Card</label>
-                <input class="radio-button" id="debitBtn" type="radio" name="payment"><label for="debitBtn">Debit card</label>
-                <input class="radio-button" id="upiBtn" type="radio" name="payment"><label for="upiBtn">Upi</label>
+                <input class="radio-button" id="CreditBtn" type="radio" name="payment" value="Credit Card" checked>
+                <label for="CreditBtn">Credit Card</label>
+                <input class="radio-button" id="debitBtn" type="radio" name="payment" value="Debit Card">
+                <label for="debitBtn">Debit
+                    card</label>
+                <input class="radio-button" id="upiBtn" type="radio" name="payment" value="UPI">
+                <label for="upiBtn">Upi</label>
 
                 <br>
                 <label for="">Name on Card</label><br>
-                <input class="card" type="text">
+                <input class="card input" type="text">
                 <br>
                 <label for="">Credit Card number</label><br>
-                <input class="card" type="number">
+                <input class="card input" type="number">
                 <br>
                 <label>Expiration</label><br>
-                <input class="card" type="date">
+                <input class="card input" type="date">
                 <br>
                 <label for="">CVV</label><br>
-                <input class="card" type="number">
+                <input class="card input" type="number">
                 <br>
                 <input class="card" type="submit" value="Procced to Pay">
 
@@ -67,4 +71,5 @@
 </body>
 
 </html>
-<script src="./payment.js"></script>
+<script src="./payment.js">
+</script>
